@@ -1,5 +1,5 @@
 {
-  "name": "확률 도구",
+  "name": "probability-tools-desktop",
   "version": "1.0.0",
   "main": "./build/electron/main.js",
   "scripts": {
@@ -7,9 +7,52 @@
     "serve": "cross-env NODE_ENV=production electron .",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
-    "postinstall": "electron-builder install-app-deps"
+    "postinstall": "electron-builder install-app-deps",
+    "build:osx": "build --mac",
+    "build:linux": "npm run build:linux32 && npm run build:linux64",
+    "build:linux32": "build --linux --ia32",
+    "build:linux64": "build --linux --x64",
+    "build:win": "npm run build:win32 && npm run build:win64",
+    "build:win32": "build --win --ia32",
+    "build:win64": "build --win --x64"
   },
   "build": {
+    "productName": "확률 도구",
+    "appId": "probability.tools.desktop",
+    "protocols": {
+      "name": "확률 도구"
+    },
+    "mac": {
+      "target": [
+        "default"
+      ],
+      "icon": "./electron-root/favicon.ico"
+    },
+    "dmg": {
+      "title": "확률 도구 설치",
+      "icon": "./electron-root/favicon.ico"
+    },
+    "win": {
+      "target": [
+        "zip",
+        "nsis"
+      ],
+      "icon": "./electron-root/favicon.ico"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm",
+        "zip",
+        "tar.gz"
+      ],
+      "icon": "./electron-root/favicon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": false
+    },
     "files": ["build/**/*"],
     "directories": {
       "buildResources": "assets"
