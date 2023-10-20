@@ -8,19 +8,22 @@
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
     "postinstall": "electron-builder install-app-deps",
-    "build:osx": "build --mac",
+    "build:osx": "electron-builder --mac",
     "build:linux": "npm run build:linux32 && npm run build:linux64",
-    "build:linux32": "build --linux --ia32",
-    "build:linux64": "build --linux --x64",
+    "build:linux32": "electron-builder --linux --ia32",
+    "build:linux64": "electron-builder --linux --x64",
     "build:win": "npm run build:win32 && npm run build:win64",
-    "build:win32": "build --win --ia32",
-    "build:win64": "build --win --x64"
+    "build:win32": "electron-builder --win --ia32",
+    "build:win64": "electron-builder --win --x64"
   },
   "build": {
     "productName": "확률 도구",
     "appId": "probability.tools.desktop",
     "protocols": {
-      "name": "확률 도구"
+      "name": "확률 도구",
+      "schemes": [
+        "확률 도구"
+      ]
     },
     "mac": {
       "target": [
