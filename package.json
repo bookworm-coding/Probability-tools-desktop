@@ -27,20 +27,18 @@
     },
     "mac": {
       "target": [
-        "default"
-      ],
-      "icon": "./electron-root/favicon.ico"
+        "default",
+        "dir"
+      ]
     },
     "dmg": {
-      "title": "확률 도구 설치",
-      "icon": "./electron-root/favicon.ico"
+      "title": "확률 도구 설치"
     },
     "win": {
       "target": [
-        "zip",
-        "nsis"
-      ],
-      "icon": "./electron-root/favicon.ico"
+        "nsis",
+        "portable"
+      ]
     },
     "linux": {
       "target": [
@@ -49,8 +47,7 @@
         "rpm",
         "zip",
         "tar.gz"
-      ],
-      "icon": "./electron-root/favicon.ico"
+      ]
     },
     "nsis": {
       "oneClick": false,
