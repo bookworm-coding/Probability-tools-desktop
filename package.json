@@ -2,6 +2,7 @@
   "name": "probability-tools-desktop",
   "version": "1.0.0",
   "main": "./build/electron/main.js",
+  "license": "AGPL-3.0-or-later",
   "scripts": {
     "dump": "dump-stlite-desktop-artifacts",
     "serve": "cross-env NODE_ENV=production electron .",
@@ -9,11 +10,9 @@
     "dist": "electron-builder",
     "postinstall": "electron-builder install-app-deps",
     "build:osx": "electron-builder --mac",
-    "build:linux": "npm run build:linux32 && npm run build:linux64",
-    "build:linux32": "electron-builder --linux --ia32",
+    "build:linux": "npm run build:linux64",
     "build:linux64": "electron-builder --linux --x64",
-    "build:win": "npm run build:win32 && npm run build:win64",
-    "build:win32": "electron-builder --win --ia32",
+    "build:win": "npm run build:win64",
     "build:win64": "electron-builder --win --x64"
   },
   "build": {
@@ -59,9 +58,9 @@
     }
   },
   "devDependencies": {
-    "@stlite/desktop": "0.39.0",
-    "cross-env": "^7.0.3",
-    "electron": "^26.2.4",
-    "electron-builder": "^24.6.4"
+    "@stlite/desktop": "0.42.2",
+    "cross-env": "7.0.3",
+    "electron": "28.0.0-alpha.4",
+    "electron-builder": "24.8.0"
   }
 }
