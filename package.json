@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "main": "./build/electron/main.js",
   "license": "AGPL-3.0-or-later",
+  "author": {
+    "name": "bookworm-coding",
+    "email": "bookwormkkm00@gmail.com",
+    "url": "https://github.com/bookworm-coding"
+  },
   "scripts": {
     "dump": "dump-stlite-desktop-artifacts",
     "serve": "cross-env NODE_ENV=production electron .",
