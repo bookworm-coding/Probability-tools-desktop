@@ -66,8 +66,8 @@
   },
   "devDependencies": {
     "@stlite/desktop": "latest",
-    "cross-env": "^7.0.3",
-    "electron": "^26.2.4",
-    "electron-builder": "^24.6.4"
+    "cross-env": "latest",
+    "electron": "latest",
+    "electron-builder": "latest"
   }
 }
